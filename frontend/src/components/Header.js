@@ -18,10 +18,12 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+      <Navbar  variant='dark' expand='lg' collapseOnSelect className='navbar-class'>
+      <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_500,h_500/https://www.indiherbs.com/wp-content/uploads/2022/12/Untitled_design__2_-removebg-preview-1.png" style={{width:"80px",height:"80px"}}></img>
         <Container>
+
           <LinkContainer to='/'>
-            <Navbar.Brand>ProShop</Navbar.Brand>
+            <Navbar.Brand ><h2 className='black-one'>Indiherbs</h2></Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
