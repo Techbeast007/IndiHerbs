@@ -6,6 +6,7 @@ import Rating from '../components/Rating'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Meta from '../components/Meta'
+import ReactImageMagnify from 'react-image-magnify';
 import {
   listProductDetails,
   createProductReview,
@@ -70,28 +71,23 @@ const ProductScreen = ({ history, match }) => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+            <Col md={3} className="colse">
+            <ReactImageMagnify {...{
+    smallImage: {
+      alt:`${product.name}`,
+        isFluidWidth: true,
+        src:`${product.image}`
+    },
+    largeImage: {
+      src:`${product.image}`,
+        width: 1400,
+        height: 1400
+    },enlargedImagePosition:"over"
+}}  />
+              {/* <Image src={product.image} alt={product.name} fluid /> */}
             </Col>
-            <Col md={3}>
-              <ListGroup variant='flush'>
-                <ListGroup.Item>
-                  <h3>{product.name}</h3>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} reviews`}
-                  />
-                </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {product.description}
-                </ListGroup.Item>
-              </ListGroup>
-            </Col>
-            <Col md={3}>
-              <Card>
+            <Col md={3} clasName="colsed">
+              <Card >
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
                     <Row>
@@ -146,6 +142,26 @@ const ProductScreen = ({ history, match }) => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
+            </Col>
+            </Row><Row>
+
+            
+            <Col md={4} >
+              <ListGroup variant='flush' >
+                <ListGroup.Item>
+                  <h3>{product.name}</h3>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <Rating
+                    value={product.rating}
+                    text={`${product.numReviews} reviews`}
+                  />
+                </ListGroup.Item>
+                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>
+                  Description: {product.description}
+                </ListGroup.Item>
+              </ListGroup >
             </Col>
           </Row>
           <Row>

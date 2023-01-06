@@ -23,8 +23,17 @@ const Product = ({ product }) => {
             text={`${product.numReviews} reviews`}
           />
         </Card.Text>
+        {/* <div class="container"> */}
+        
+        <Card.Text as='h3' className='button btn-3'><Link to={`/product/${product._id}`} className="links">${product.price}</Link></Card.Text>
+  {/* <a class="btn btn-1">${product.price}</a> */}
+  {/* <a class="btn btn-2">Hover me</a>
+  <a class="btn btn-3">Hover me</a> 
+  <a class="btn btn-4">Hover me</a> 
+  <a class="btn btn-5">Hover me</a> */}
+{/* </div> */}
 
-        <Card.Text as='h3'>${product.price}</Card.Text>
+       
       </Card.Body>
     </Card>
   )

@@ -18,8 +18,8 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar  variant='dark' expand='lg' collapseOnSelect className='navbar-class'>
-      <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_500,h_500/https://www.indiherbs.com/wp-content/uploads/2022/12/Untitled_design__2_-removebg-preview-1.png" style={{width:"80px",height:"80px"}}></img>
+      <Navbar  variant='dark' expand='lg'  className='navbar-class'>
+      {/* <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_500,h_500/https://www.indiherbs.com/wp-content/uploads/2022/12/Untitled_design__2_-removebg-preview-1.png" style={{width:"80px",height:"80px"}}></img> */}
         <Container>
 
           <LinkContainer to='/'>
