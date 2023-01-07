@@ -19,6 +19,7 @@ import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 
+
 import './styles.css'
 
 const App = () => {
@@ -61,7 +62,7 @@ const App = () => {
           <Route path='/' component={HomeScreen} exact />
         </Container>
       </main>
-      <Footer />
+      <Footer/>
     </Router>
   )
 }

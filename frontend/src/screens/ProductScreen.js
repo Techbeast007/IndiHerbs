@@ -71,23 +71,40 @@ const ProductScreen = ({ history, match }) => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={3} className="colse">
+            <Col md={6}>
             <ReactImageMagnify {...{
     smallImage: {
-      alt:`${product.name}`,
+        alt: `${product.name}`,
         isFluidWidth: true,
-        src:`${product.image}`
+        src: `${product.image}`
     },
     largeImage: {
-      src:`${product.image}`,
-        width: 1400,
-        height: 1400
-    },enlargedImagePosition:"over"
-}}  />
+        src: `${product.image}`,
+        width: 1200,
+        height: 1800
+    },enlargedImagePosition:'over'
+}} />
               {/* <Image src={product.image} alt={product.name} fluid /> */}
             </Col>
-            <Col md={3} clasName="colsed">
-              <Card >
+            <Col md={3}>
+              <ListGroup variant='flush'>
+                <ListGroup.Item>
+                  <h3>{product.name}</h3>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <Rating
+                    value={product.rating}
+                    text={`${product.numReviews} reviews`}
+                  />
+                </ListGroup.Item>
+                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>
+                  Description: {product.description}
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+            <Col md={3}>
+              <Card>
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
                     <Row>
@@ -142,26 +159,6 @@ const ProductScreen = ({ history, match }) => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
-            </Col>
-            </Row><Row>
-
-            
-            <Col md={4} >
-              <ListGroup variant='flush' >
-                <ListGroup.Item>
-                  <h3>{product.name}</h3>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} reviews`}
-                  />
-                </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {product.description}
-                </ListGroup.Item>
-              </ListGroup >
             </Col>
           </Row>
           <Row>
