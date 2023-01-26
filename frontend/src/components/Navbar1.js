@@ -34,7 +34,7 @@ function Navbar1() {
             <Route render={({ history }) => <SearchBox history={history} />} />
 				<Link to={"/cart"} onClick={showNavbar}><i className='fas fa-shopping-cart'></i> Cart</Link>
                {userInfo?<><Link to={"/profile"} onClick={showNavbar}>{userInfo.name}</Link>
-               <a  onClick={logoutHandler}>Logout</a></>:<Link to='/login'>
+               <a  onClick={logoutHandler}>Logout</a></>:<Link to='/login' onClick={showNavbar}>
                
                     <i className='fas fa-user'></i> Sign In
                  
