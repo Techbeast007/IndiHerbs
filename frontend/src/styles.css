@@ -3,6 +3,15 @@
     height: 80px;
 }
 
+
+
+@media only screen and (min-width: 845px) and (max-width: 911px){
+  .navbar-collapse {
+    background: white;
+    height: 80px;
+    z-index: 999;
+  }
+}
 .black-one{
     
     font-weight: 800;
@@ -19,6 +28,8 @@
 
 .crousal{
     background:radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    z-index: -1;
+    margin-top: 70px;
 }
 
 .images{
@@ -148,3 +159,5 @@
     height: 600px;
     margin: 100px 0px 40px 89px;
   }
+
+

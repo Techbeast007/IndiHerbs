@@ -20,11 +20,13 @@ import OrderListScreen from './screens/OrderListScreen'
 
 
 import './styles.css'
+import Navbar1 from './components/Navbar1'
 
 const App = () => {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Navbar1/>
       
       <main className='py-3'>
         <Container>
