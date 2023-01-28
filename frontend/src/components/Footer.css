@@ -3,9 +3,10 @@
     flex-direction: column;
     margin-bottom: 0;
     font-weight: bold;
-    background: #FEFCF3;
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
     padding-top: 30px;
     padding-bottom: 30px;
+    height: 200px;
   }
   
   .footer-social-media {

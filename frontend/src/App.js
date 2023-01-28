@@ -21,6 +21,7 @@ import OrderListScreen from './screens/OrderListScreen'
 
 import './styles.css'
 import Navbar1 from './components/Navbar1'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -63,6 +64,7 @@ const App = () => {
           <Route path='/' component={HomeScreen} exact />
         </Container>
       </main>
+      <Footer/>
    
     </Router>
   )
