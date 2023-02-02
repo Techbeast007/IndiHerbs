@@ -5,8 +5,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import '../navbar.css'
 import { Route,Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
 
@@ -34,7 +32,7 @@ function Navbar1() {
             <Route render={({ history }) => <SearchBox history={history} />} />
 				<Link to={"/cart"} onClick={showNavbar}><i className='fas fa-shopping-cart'></i> Cart</Link>
                {userInfo?<><Link to={"/profile"} onClick={showNavbar}>{userInfo.name}</Link>
-               <Link  onClick={logoutHandler}>Logout</Link></>:<Link to='/login' onClick={showNavbar}>
+               <Link to=""  onClick={logoutHandler}>Logout</Link></>:<Link to='/login' onClick={showNavbar}>
                
                     <i className='fas fa-user'></i> Sign In
                  
@@ -49,9 +47,9 @@ function Navbar1() {
                     
 
                  )}
-				
-				<a href="/#">Blog</a>
-				<a href="/#">About me</a>
+				<Link to={"/blog"} onClick={showNavbar}>Blog</Link>
+				<Link to={"/blogEdit"} onClick={showNavbar}>Edit Posts</Link>
+			
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

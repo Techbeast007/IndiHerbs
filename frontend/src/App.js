@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
-import Header from './components/Header'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
@@ -17,11 +16,13 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
+import Blog from './screens/blogScreen'
 
 
 import './styles.css'
 import Navbar1 from './components/Navbar1'
 import Footer from './components/Footer'
+import BlogEdit from './screens/blogEdit'
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
+          <Route path='/blog' component={Blog} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
@@ -50,6 +52,11 @@ const App = () => {
           <Route
             path='/admin/productlist/:pageNumber'
             component={ProductListScreen}
+            exact
+          />
+                    <Route
+            path='/blogEdit'
+            component={BlogEdit}
             exact
           />
           <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
