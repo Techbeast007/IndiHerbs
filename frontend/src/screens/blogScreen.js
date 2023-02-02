@@ -9,7 +9,7 @@ import axios from 'axios';
 function Blog() {
   const [posts,setPosts] = useState([])
     useEffect(()=>{
-        axios.get(`https://www.indiherbs.onrender.com/api/blog/`).then((res)=>{
+        axios.get(`/api/blog/`).then((res)=>{
             setPosts(res.data)
         }).catch((err)=>{
             console.log(err)

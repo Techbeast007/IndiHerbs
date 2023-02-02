@@ -25,7 +25,7 @@ const BlogEdit = () => {
       },
     }
 
-    await axios.post('https://www.indiherbs.onrender.com/api/blog/',{
+    await axios.post('/api/blog/',{
         title:title,
         image:image,
         description:description,
