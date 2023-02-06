@@ -1,30 +1,53 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 
 
 const BlogEdit = () => {
-
-
+  const location = useLocation()
   const [title, setTitle] = useState('')
   const [image, setImage] = useState('')
   const [description, setDescription] = useState('')
   const [uploading, setUploading] = useState(false)
+  const [id,setId] = useState(location?.state?location.state.id:'')
   useEffect(()=>{
-    
+    if(id){axios.get(`/api/blog/${id}`).then((res)=>{
+      setTitle(res.data.title)
+      setImage(res.data.image)
+      setDescription(res.data.description)
+
+    })}
 
   },[])
 
+  const putPost =async()=>{
+ await axios.put(`/api/blog/${location.state.id}`,{
+      title:title,
+      image:image,
+      description:description,
+      user:{
+        isAdmin:"true"
+      }
+  }).then((res)=>{
+      console.log(res)
+
+  }).catch((err)=>{
+    localStorage.setItem("item",err)
+      console.log(err)
+
+  })
+  }
   const updatePost=async()=>{
+    console.log(title,image,description)
     const config = {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
     }
-
+   
     await axios.post('/api/blog/',{
         title:title,
         image:image,
@@ -88,7 +111,7 @@ const BlogEdit = () => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='Description'>
+            <Form.Group controlId='Description' >
               <Form.Label>Description</Form.Label>
               <Form.Control
                 type='text'
@@ -116,9 +139,11 @@ const BlogEdit = () => {
             </Form.Group>
 
 
-            <Button type='submit' variant='primary' onClick={()=>updatePost()}>
+           {location?.state?.id ? <Button type='submit' variant='primary' onClick={()=>putPost()}>
               Update
-            </Button>
+            </Button>:<Button type='submit' variant='primary' onClick={()=> updatePost()}>
+              Update
+            </Button>}
             
           </Form>
       </FormContainer>

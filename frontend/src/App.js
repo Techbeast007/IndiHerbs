@@ -23,6 +23,8 @@ import './styles.css'
 import Navbar1 from './components/Navbar1'
 import Footer from './components/Footer'
 import BlogEdit from './screens/blogEdit'
+import SingleBlog from './screens/singleBlog'
+import BlogList from './screens/blogList'
 
 const App = () => {
   return (
@@ -49,6 +51,7 @@ const App = () => {
             component={ProductListScreen}
             exact
           />
+          <Route path='/blogsPost/:id' component={SingleBlog}/>
           <Route
             path='/admin/productlist/:pageNumber'
             component={ProductListScreen}
@@ -59,6 +62,7 @@ const App = () => {
             component={BlogEdit}
             exact
           />
+          <Route path = '/blogList' component={BlogList}/>
           <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
           <Route path='/admin/orderlist' component={OrderListScreen} />
           <Route path='/search/:keyword' component={HomeScreen} exact />

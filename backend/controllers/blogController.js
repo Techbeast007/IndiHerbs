@@ -22,7 +22,7 @@ export const getBlogPost = (req, res) => {
 
 // Create a new blog post
 export const createBlogPost = (req, res) => {
-    
+    console.log(req)
     console.log(req.body.user.isAdmin)
   if (!req.body.user || !req.body.user.isAdmin) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -59,9 +59,10 @@ export const updateBlogPost = (req, res) => {
 
 // Delete a blog post
 export const deleteBlogPost = (req, res) => {
-  if (!req.body.user || !req.body.user.isAdmin) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
+  
+  // if (!req.body.user || !req.body.user.isAdmin) {
+  //   return res.status(401).json({ error: 'Unauthorized' });
+  // }
 
   BlogPost.findByIdAndDelete(req.params.id)
     .then(post => {

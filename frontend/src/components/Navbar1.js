@@ -43,12 +43,13 @@ function Navbar1() {
                     <Link to={"/admin/userlist"} onClick={showNavbar}>Admin</Link>
                     <Link to={"/admin/productlist"} onClick={showNavbar}>Product List</Link>
                     <Link to={"/admin/orderlist"} onClick={showNavbar}>Order List</Link>
+					<Link to={"/blogList"} onClick={showNavbar}>Blog List</Link>
                     </>
                     
 
                  )}
 				<Link to={"/blog"} onClick={showNavbar}>Blog</Link>
-				<Link to={"/blogEdit"} onClick={showNavbar}>Edit Posts</Link>
+			
 			
 				<button
 					className="nav-btn nav-close-btn"
