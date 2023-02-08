@@ -98,7 +98,7 @@ const ProductScreen = ({ history, match }) => {
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: {product.description}
+                  {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -164,7 +164,7 @@ const ProductScreen = ({ history, match }) => {
             <Col md={12} className='desp'>
               <h2>Description</h2>
               <Container fluid >
-                hello
+                {product.descriptionMore?product.descriptionMore:''}
 
               </Container>
               {/* {product.reviews.length === 0 && <Message>No Reviews</Message>} */}

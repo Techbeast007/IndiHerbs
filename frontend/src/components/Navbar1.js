@@ -43,8 +43,8 @@ function Navbar1() {
                } 
 
 				<Link to={"/blog"} onClick={showNavbar} className='links'>Blog</Link>
-				<NavDropdown title="Admin Menu" className="links" >
-			{userInfo && userInfo.isAdmin && (<>
+				{userInfo && userInfo.isAdmin && (<NavDropdown title="Admin Menu" className="links" >
+			<>
 			
 				<NavDropdown.Item className="droped">
 					 <Link to={"/admin/userlist"} onClick={showNavbar} className="links">Admin</Link>
@@ -56,8 +56,8 @@ function Navbar1() {
 		   </NavDropdown.Item>
 		   <NavDropdown.Item className="droped"> <Link to={"/admin/orderlist"} onClick={showNavbar} className="links">Order List</Link></NavDropdown.Item>
 		   <NavDropdown.Item className="droped"><Link to={"/blogList"} onClick={showNavbar} className="links">Blog List</Link></NavDropdown.Item>
-		   </> )}
-			</NavDropdown>
+		   </> 
+			</NavDropdown>)}
 			
 			
 				<button

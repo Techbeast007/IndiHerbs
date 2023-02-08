@@ -179,4 +179,26 @@
     color:black;
   }
 
+.sant{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sants{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sants {
+    margin-left: 85px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sants {
+    margin-left: 80px;
+  }
+}
 

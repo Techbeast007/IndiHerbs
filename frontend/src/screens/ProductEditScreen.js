@@ -19,6 +19,7 @@ const ProductEditScreen = ({ match, history }) => {
   const [category, setCategory] = useState('')
   const [countInStock, setCountInStock] = useState(0)
   const [description, setDescription] = useState('')
+  const [descriptionMore, setDescriptionMore] = useState('')
   const [uploading, setUploading] = useState(false)
 
   const dispatch = useDispatch()
@@ -48,6 +49,7 @@ const ProductEditScreen = ({ match, history }) => {
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setDescription(product.description)
+        setDescriptionMore(product.descriptionMore)
       }
     }
   }, [dispatch, history, productId, product, successUpdate])
@@ -86,6 +88,7 @@ const ProductEditScreen = ({ match, history }) => {
         brand,
         category,
         description,
+        descriptionMore,
         countInStock,
       })
     )
@@ -182,6 +185,16 @@ const ProductEditScreen = ({ match, history }) => {
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
+            <Form.Group controlId='descriptionMore'>
+              <Form.Label>More Description</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter description'
+                value={descriptionMore}
+                onChange={(e) => setDescriptionMore(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
 
             <Button type='submit' variant='primary'>
               Update

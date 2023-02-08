@@ -71,6 +71,41 @@ const HomeScreen = ({ match }) => {
           
         
       )}
+      <Container>
+        <Row className="sant"> 
+          <Col sm={12} md={6} lg={4} xl={3} >
+          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/free-shipping-e1657969467553-150x150.png" className="sants">
+        </Image>
+        <h6 className="sant">Free Shipping</h6>
+        <p>Grab the opportunity of Free shipping in US on all our products in offer.</p>
+
+          </Col>
+          <Col sm={12} md={6} lg={4} xl={3} >
+          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/100-Natural-e1657973302528-150x150.png" className="sants">
+        </Image>
+        <h6 className="sant">100% Natural</h6>
+        <p className="sant">Made from 100% Natural herbs to extract the greatest synergistic benefits.</p>
+
+          </Col>
+          <Col sm={12} md={6} lg={4} xl={3}>
+          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/High-Quality-e1657969427597-150x150.png" className="sants">
+        </Image>
+        <h6 className="sant" >High Quality</h6>
+        <p className="sant">We are destined to provide high quality with purest and natural form of herbs in our supplements.</p>
+
+          </Col>
+          <Col sm={12} md={6} lg={4} xl={3}>
+          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/30days-e1657973319576-150x150.png" className="sants">
+        </Image>
+        <h6 className="sant">30 Days MoneyBack Guarantee</h6>
+        <p className="sant">Our 30-day risk-free guarantee means we'll happily refund your purchase price.</p>
+
+          </Col>
+        </Row>
+        
+       
+      </Container>
+      
 
 
 
