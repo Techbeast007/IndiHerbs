@@ -7,6 +7,7 @@ import { Route,Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
+import { NavDropdown } from "react-bootstrap";
 
 
 function Navbar1() {
@@ -26,29 +27,37 @@ function Navbar1() {
 
 	return (
 		<header>
+
 			<h3><Link to={"/"}>INDIHERBS</Link></h3>
-           
+			{/* <i className='fas fa-shopping-cart links' ></i>  */}
 			<nav ref={navRef}>
             <Route render={({ history }) => <SearchBox history={history} />} />
-				<Link to={"/cart"} onClick={showNavbar}><i className='fas fa-shopping-cart'></i> Cart</Link>
-               {userInfo?<><Link to={"/profile"} onClick={showNavbar}>{userInfo.name}</Link>
-               <Link to=""  onClick={logoutHandler}>Logout</Link></>:<Link to='/login' onClick={showNavbar}>
+				<Link to={"/cart"} onClick={showNavbar} className='links'> Cart</Link>
+               {userInfo?<><Link to={"/profile"} onClick={showNavbar} className='links'>{userInfo.name}</Link>
+               <Link to=""  onClick={logoutHandler} className='links'>Logout</Link></>:<Link to='/login' onClick={showNavbar} className='links'>
                
-                    <i className='fas fa-user'></i> Sign In
+                    <i className='fas fa-user' ></i> Sign In
                  
                 </Link>
 
                } 
-                 {userInfo && userInfo.isAdmin && (<>
-                    <Link to={"/admin/userlist"} onClick={showNavbar}>Admin</Link>
-                    <Link to={"/admin/productlist"} onClick={showNavbar}>Product List</Link>
-                    <Link to={"/admin/orderlist"} onClick={showNavbar}>Order List</Link>
-					<Link to={"/blogList"} onClick={showNavbar}>Blog List</Link>
-                    </>
-                    
 
-                 )}
-				<Link to={"/blog"} onClick={showNavbar}>Blog</Link>
+				<Link to={"/blog"} onClick={showNavbar} className='links'>Blog</Link>
+				<NavDropdown title="Admin Menu" className="links" >
+			{userInfo && userInfo.isAdmin && (<>
+			
+				<NavDropdown.Item className="droped">
+					 <Link to={"/admin/userlist"} onClick={showNavbar} className="links">Admin</Link>
+
+				</NavDropdown.Item>
+				<NavDropdown.Item className="droped">
+				<Link to={"/admin/productlist"} onClick={showNavbar} className="links">Product List</Link>
+
+		   </NavDropdown.Item>
+		   <NavDropdown.Item className="droped"> <Link to={"/admin/orderlist"} onClick={showNavbar} className="links">Order List</Link></NavDropdown.Item>
+		   <NavDropdown.Item className="droped"><Link to={"/blogList"} onClick={showNavbar} className="links">Blog List</Link></NavDropdown.Item>
+		   </> )}
+			</NavDropdown>
 			
 			
 				<button
@@ -60,6 +69,7 @@ function Navbar1() {
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars />
 			</button>
+
 		</header>
 	);
 }

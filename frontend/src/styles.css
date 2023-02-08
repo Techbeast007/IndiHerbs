@@ -29,7 +29,8 @@
 .crousal{
     background:radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
     z-index: -1;
-    margin-top: 70px;
+    margin-top: 10px;
+    margin-bottom:40px;
 }
 
 .images{
@@ -128,13 +129,13 @@
 
   .links{
    
-        font-size: 30px;
+        font-size: 23px;
         text-transform: uppercase;
         /* font-family: 'Gambetta', serif; */
         letter-spacing: -2px;
         transition: 700ms ease;
         font-variation-settings: "wght" 311;
-        margin: 0.8rem;
+        margin: 20px;
         color: rgb(255, 255, 255);
         outline: none;
         text-align: center;
@@ -158,6 +159,24 @@
     width: 500px;
     height: 600px;
     margin: 100px 0px 40px 89px;
+  }
+  .zoom {
+
+    transition: transform .2s; /* Animation */
+
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .desp{
+    margin-top: 90px;
+    margin-bottom: 60px;
+  }
+  .droped{
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    color:black;
   }
 
 

@@ -21,9 +21,10 @@ function Blog() {
     },[])
     
   return (
-    <><Container>
-   <Row> {posts.map((item)=> <Col key={item._id}><Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={item.image} />
+    <><Container >
+      <h1>Blogs</h1>
+   <Row> {posts.map((item)=> <Col key={item._id}><Card style={{ width: '18rem',marginBottom:'10px',minHeight:"18rem" }} sm={12} md={6} lg={4} xl={3}className='my-3 p-3 rounded zoom'>
+            <Card.Img variant="top" src={item.image} style={{ minWidth: '9rem',minHeight:"9rem" }}/>
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Text> 
@@ -32,7 +33,7 @@ function Blog() {
               <Link to={{
       pathname: `/blogsPost/${item.title}`,
       state: { id:item._id } 
-    }} ><Button variant="primary">Read More</Button></Link>
+    }} ><Button variant="primary" style={{width:"-webkit-fill-available"}}>Read More</Button></Link>
             </Card.Body>
           </Card></Col>)}</Row></Container>
     
