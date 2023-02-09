@@ -12,7 +12,10 @@ import { listProducts } from '../actions/productActions'
 import axios from 'axios'
 import Card from 'react-bootstrap/Card';
 import {Button,Image} from 'react-bootstrap'
-
+import logo from '../images/logo.png'
+import logos from '../images/logs.png'
+import logos1 from '../images/logos1.png'
+import logos2 from '../images/logos2.png'
 const HomeScreen = ({ match }) => {
   const [posts,setPosts] = useState([])
 
@@ -71,47 +74,117 @@ const HomeScreen = ({ match }) => {
           
         
       )}
-      <Container>
-        <Row className="sant"> 
-          <Col sm={12} md={6} lg={4} xl={3} >
-          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/free-shipping-e1657969467553-150x150.png" className="sants">
-        </Image>
-        <h6 className="sant">Free Shipping</h6>
-        <p>Grab the opportunity of Free shipping in US on all our products in offer.</p>
+      <Row>
+      <Col sm={12} md={6} lg={4} xl={3}>
+       <Card border="success" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}} >
+     
+       
+        <Card.Img src={logos2} variant='top' />
 
-          </Col>
-          <Col sm={12} md={6} lg={4} xl={3} >
-          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/100-Natural-e1657973302528-150x150.png" className="sants">
-        </Image>
-        <h6 className="sant">100% Natural</h6>
-        <p className="sant">Made from 100% Natural herbs to extract the greatest synergistic benefits.</p>
+      <Card.Body>
+       
+          <Card.Title as='div'>
+            <strong><b><h5>Free Shipping</h5></b></strong>
+          </Card.Title>
+    
 
-          </Col>
-          <Col sm={12} md={6} lg={4} xl={3}>
-          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/High-Quality-e1657969427597-150x150.png" className="sants">
-        </Image>
-        <h6 className="sant" >High Quality</h6>
-        <p className="sant">We are destined to provide high quality with purest and natural form of herbs in our supplements.</p>
+        <Card.Text as='div'>
+        <h6> Grab the opportunity of Free shipping in US on all our products in offer.</h6>
+        
+          
+        </Card.Text>
 
-          </Col>
-          <Col sm={12} md={6} lg={4} xl={3}>
-          <Image src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_150,h_150/https://www.indiherbs.com/wp-content/uploads/2021/09/30days-e1657973319576-150x150.png" className="sants">
-        </Image>
-        <h6 className="sant">30 Days MoneyBack Guarantee</h6>
-        <p className="sant">Our 30-day risk-free guarantee means we'll happily refund your purchase price.</p>
+       
+      </Card.Body>
+    </Card>
+    </Col>
+    <Col sm={12} md={6} lg={4} xl={3}>
+       <Card  border="dark" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}} >
+     
+       
+        <Card.Img src={logos} variant='top'/>
 
-          </Col>
-        </Row>
+      <Card.Body>
+       
+          <Card.Title as='div'>
+            <strong><b><h5>100% Natural</h5></b></strong>
+          </Card.Title>
+    
+
+        <Card.Text as='div'>
+        <h6> Made from 100% Natural herbs to extract the greatest synergistic benefits.</h6>
+        
+          
+        </Card.Text>
+
+       
+      </Card.Body>
+    </Card>
+    </Col>
+    <Col sm={12} md={6} lg={4} xl={3}>
+       <Card  border="warning" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}}>
+     
+        <Card.Img src={logo} variant='top' />
+      
+
+      <Card.Body>
+       
+          <Card.Title as='div' style={{fontFamily:"fantasy",weight:'900',color:"black",fontSize:"20px"}}>
+            <strong><b><h5>HIGH QUALITY</h5></b></strong>
+          </Card.Title>
+    
+
+        <Card.Text as='div'>
+        <h6> We are destined to provide high quality with purest and natural form of herbs in our supplements.</h6>
+        
+          
+        </Card.Text>
+
+       
+      </Card.Body>
+    </Card>
+    </Col>
+    <Col sm={12} md={6} lg={4} xl={3}>
+       <Card border="info" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}}>
+     
+        <Card.Img src={logos1} variant='top'  />
+      
+
+      <Card.Body>
+       
+          <Card.Title as='div'>
+            <strong><b><h5>
+30 DAYS MONEYBACK GUARANTEE</h5></b></strong>
+          </Card.Title>
+    
+
+        <Card.Text as='div'>
+        <h6> Our 30-day risk-free guarantee means we'll happily refund your purchase price.</h6>
+        
+          
+        </Card.Text>
+
+       
+      </Card.Body>
+    </Card>
+    </Col>
+    </Row>
+
+      
+     
+
+      
+   
         
        
-      </Container>
+
       
 
 
 
 
 
-      <h1 style={{marginTop:'30px'}}>Latest Blogs</h1>
+      <h1 style={{marginTop:'30px'}}>Learn more on our Health Blogs</h1>
                 
          
               <Row> {posts.map((item)=> <Col key={item._id} sm={12} md={6} lg={4} xl={3}><Card  className='my-3 p-3 rounded zoom'>

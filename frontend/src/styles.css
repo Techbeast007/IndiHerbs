@@ -129,7 +129,7 @@
 
   .links{
    
-        font-size: 23px;
+        font-size: 18px;
         text-transform: uppercase;
         /* font-family: 'Gambetta', serif; */
         letter-spacing: -2px;
@@ -179,26 +179,45 @@
     color:black;
   }
 
-.sant{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .sants{
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 5px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (300px <= width <= 500px) {
   .sants {
     margin-left: 85px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (500px <= width <= 600px) {
+  .sants {
+    margin-left: 150px;
+  }
+}
+@media only screen and (600px <= width <= 1000px) {
   .sants {
     margin-left: 80px;
   }
+}
+@media only screen and (1024px <= width) {
+  .sants {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+
+.cont{
+  margin-top: 80px;
+  margin-bottom: 90px;
+  
 }
 
