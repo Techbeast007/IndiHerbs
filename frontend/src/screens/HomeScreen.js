@@ -74,9 +74,10 @@ const HomeScreen = ({ match }) => {
           
         
       )}
-      <Row>
+      <Container style={{background:"#000000"}}>
+      <Row style={{marginTop:"60px"}}>
       <Col sm={12} md={6} lg={4} xl={3}>
-       <Card border="success" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}} >
+       <Card border="success" className='my-3 p-3 rounded zoom' style={{minHeight:"26rem",maxHeight:"26rem"}} >
      
        
         <Card.Img src={logos2} variant='top' />
@@ -99,7 +100,7 @@ const HomeScreen = ({ match }) => {
     </Card>
     </Col>
     <Col sm={12} md={6} lg={4} xl={3}>
-       <Card  border="dark" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}} >
+       <Card  border="dark" className='my-3 p-3 rounded zoom' style={{minHeight:"26rem",maxHeight:"26rem"}} >
      
        
         <Card.Img src={logos} variant='top'/>
@@ -122,7 +123,7 @@ const HomeScreen = ({ match }) => {
     </Card>
     </Col>
     <Col sm={12} md={6} lg={4} xl={3}>
-       <Card  border="warning" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}}>
+       <Card  border="warning" className='my-3 p-3 rounded zoom' style={{minHeight:"26rem",maxHeight:"26rem"}}>
      
         <Card.Img src={logo} variant='top' />
       
@@ -145,7 +146,7 @@ const HomeScreen = ({ match }) => {
     </Card>
     </Col>
     <Col sm={12} md={6} lg={4} xl={3}>
-       <Card border="info" className='my-3 p-3 rounded zoom' style={{minHeight:"28rem"}}>
+       <Card border="info" className='my-3 p-3 rounded zoom' style={{maxHeight:"26rem"}}>
      
         <Card.Img src={logos1} variant='top'  />
       
@@ -169,6 +170,7 @@ const HomeScreen = ({ match }) => {
     </Card>
     </Col>
     </Row>
+    </Container>
 
       
      
@@ -187,8 +189,8 @@ const HomeScreen = ({ match }) => {
       <h1 style={{marginTop:'30px'}}>Learn more on our Health Blogs</h1>
                 
          
-              <Row> {posts.map((item)=> <Col key={item._id} sm={12} md={6} lg={4} xl={3}><Card  className='my-3 p-3 rounded zoom'>
-              <Card.Img variant="top" src={item.image} style={{ minWidth: '9rem',minHeight:"9rem" }}/>
+              <Row> {posts.map((item)=> <Col key={item._id} sm={12} md={6} lg={4} xl={3}><Card  className='my-3 p-3 rounded zoom' style={{minHeight:"18rem",maxHeight:"20rem"}}>
+              <Card.Img variant="top" src={item.image} style={{ minWidth: '9rem',minHeight:"9rem",maxHeight:"5rem",maxWidth:"fill" }}/>
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text> 

@@ -23,8 +23,8 @@ function Blog() {
   return (
     <><Container >
       <h1>Blogs</h1>
-   <Row> {posts.map((item)=> <Col key={item._id}><Card style={{ width: '18rem',marginBottom:'10px',minHeight:"18rem" }} sm={12} md={6} lg={4} xl={3}className='my-3 p-3 rounded zoom'>
-            <Card.Img variant="top" src={item.image} style={{ minWidth: '9rem',minHeight:"9rem" }}/>
+   <Row> {posts.map((item)=> <Col key={item._id}><Card style={{ width: '18rem',marginBottom:'10px',minHeight:"18rem",maxHeight:"22rem" }} sm={12} md={6} lg={4} xl={3}className='my-3 p-3 rounded zoom'>
+            <Card.Img variant="top" src={item.image} style={{ minWidth: '9rem',minHeight:"9rem",maxHeight:"6rem" }}/>
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Text> 
